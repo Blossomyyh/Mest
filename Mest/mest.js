@@ -1,10 +1,13 @@
-var items = document.querySelectorAll("item");
 var index = 0;
 
+/*
+ todo: handle different touch event of background
+ */
 touchHandler = {
+    /*
+    todo: add new element to list ---used when you touch the background
+     */
     start: function (event) {
-        // var newLi = document.createElement("li");
-        // newLi.classList.add("item");
         startX = event.touches[0].clientX;
         console.log("start touch");
         console.log(startX);
@@ -23,12 +26,8 @@ touchHandler = {
 
         var newTodo = newItem.querySelector(".memo");
         var data = model.data;
-        // data.msg = newTodo.value;
         console.log("newTodo:" + data.msg);
-        // if (data.msg == '') {
-        //     console.warn('input msg is empty');
-        //     return;
-        // }
+
         newTodo.addEventListener("input", function () {
             console.log("input ")
         });
@@ -37,13 +36,8 @@ touchHandler = {
             var data = model.data;
             data.msg = newTodo.value;
             console.log("newtodo:" + data.msg);
-            // if (data.msg === '') {
-            //     console.warn('input msg is empty');
-            //     return;
-            // }
             data.items.push({msg: data.msg, completed: false});
             model.flush();
-            // model.flush();
         });
         newTodo.addEventListener("touchstart", function () {
             startX = event.touches[0].clientX;
@@ -59,15 +53,11 @@ touchHandler = {
                     newItem.classList.remove("no-over");
                     newTodo.classList.add("over");
                     newTodo.classList.remove("no-over");
-                    // index --;
                     getNumber();
-                    // window.localStorage.setItem("number",index);
 
                 }
                 if (moveX > 500){
                     alert("delete it!");
-                    // index --;
-                    // window.localStorage.setItem("number",index);
                     data.items.splice(data.items.length,1);
                     model.flush()
                     getNumber();
@@ -84,7 +74,7 @@ touchHandler = {
                 }
             }
         });
-        data.items.push({msg: newTodo.value, completed: false});
+        // data.items.push({msg: newTodo.value, completed: false});
         model.flush();
         list.appendChild(newItem);
         event.stopPropagation();
@@ -94,8 +84,6 @@ touchHandler = {
     end: function (event) {
         console.log("end touch");
 
-
-        // update();
     }
 };
 
@@ -108,12 +96,15 @@ itemHaddler = {
     }
 };
 
-
+/*
+ todo: update the whole list ---used when init & fresh the html
+ */
 function update() {
     model.flush();
     var data = model.data;
     if (data){
         data.items.forEach(function (t, number) {
+
             var list = document.getElementById("allList");
             var item = document.createElement("div");
             item.classList.add("item");
@@ -184,17 +175,14 @@ function update() {
 
         });
     }
-
-
-
 }
 
-
+/*
+ todo: page init --attach function to elements
+ */
 window.onload = function () {
 
-    // window.localStorage.clear();
     model.init(function () {
-        var data = model.data;
         update();
 
     });
@@ -205,6 +193,9 @@ window.onload = function () {
     background.addEventListener("touchend", touchHandler.end,false);
 
     var title = document.getElementById("title");
+    /*
+    todo: attach touch callback ---used when you pull down the title
+    */
     title.addEventListener("touchstart", function () {
         startY= event.touches[0].clientY;
     });
@@ -225,6 +216,9 @@ window.onload = function () {
         }
     });
 
+    /*
+    todo: filter the list
+    */
     var all = document.getElementById("all");
     all.addEventListener("touchstart", function () {
         var all = document.getElementsByClassName("item");
