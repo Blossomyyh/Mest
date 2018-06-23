@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Pompiere);
+
+body{
+    font-family: "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    color: white;
+    background-color: black;
+    font-family: "Pompiere";
+    line-height: 1.5em;
+    height: 2000px;
+
+    width: 100%;
+
+}
+#back_ground{
+    height: inherit;
+    width: inherit;
+    background-color: black ;
+    position: absolute;
+    z-index: 0;
+}
+.mest{
+    float: left;
+    width: 100%;
+
+}
+#menu{
+
+}
+#list-section{
+    display: block;
+}
+
+.header{
+    text-transform: none;
+    color: #F0F0F0;
+    margin-left: 5%;
+    /*height: 200px;*/
+    /*width: 1000px;*/
+    font-size: 10em;
+    display: block;
+    padding-top: 1%;
+}
+.sum{
+    font-size: 4em;
+    margin-left: 5%;
+
+}
+#control{
+    width: inherit;
+    height: 10%;
+    background: rgba(255,255,255,0.5) ;
+    position: fixed;
+    bottom: 0;
+}
+.item-list{
+    /*line-height: 20%;*/
+    width: 100%;
+    height: 70%;
+    text-align: left;
+    opacity: 0.9;
+    list-style: none;
+    overflow: hidden;
+    display: block;
+    /*margin-top: 30%;*/
+}
+.item{
+    clear: both;
+    background: #85D4E3;
+    height: 100%;
+    position: relative;
+    display: list-item;
+    margin: 1% 2% 1% 2%;
+
+}
+.comple{
+    height: 100px;
+    width: 100px;
+    float: right;
+    vertical-align: middle;
+    background: none;
+}
+
+.over{
+    text-decoration: line-through;
+}
+.no-over{
+
+}
+
+.memo{
+    border: none;
+    width: 70%;
+    margin: 3% 0 3% 10%;
+    font-family: "Pompiere";
+    font-size: 4em;
+    background-color: transparent;
+}
+#control{
+    display: inline-block;
+    /*position: absolute;*/
+    text-align: left;
+    padding-left: 10%;
+
+}
+.filter{
+    text-align: center;
+    font-family: "Pompiere";
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 5em;
+    /*margin: auto 0;*/
+    border: solid white 1px;
+    color: #B6B6B6;
+    border-radius: 30px;
+    background: #DDDDDD;
+
+}
