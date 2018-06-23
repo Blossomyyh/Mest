@@ -46,7 +46,7 @@
     - 添加change事件，当完成文本编辑的时候将value自动保存到LocateStorage中的model.data中
     - 标题中的计数会随之变动
 
-    ![Screen Shot 2018-06-23 at 9.37.40 AM](/Users/yuhanyin/Documents/TJ/脚本程序/MEST/Screen Shot 2018-06-23 at 9.37.40 AM.png)
+    ![Screen Shot 2018-06-23 at 9.37.40 AM](/Users/yuhanyin/xcode/Mest/Screen Shot 2018-06-23 at 9.37.40 AM.png)
 
 
 - ##### 滑动删除/完成/取消、删除已完成
@@ -69,7 +69,7 @@
 
   通过控制touchmove并对moveX作分析，判断接下来的操作
 
-  ![Screen Shot 2018-06-23 at 9.39.35 AM](/Users/yuhanyin/Documents/TJ/脚本程序/MEST/Screen Shot 2018-06-23 at 9.39.35 AM.png)![Screen Shot 2018-06-23 at 9.41.03 AM](/Users/yuhanyin/Documents/TJ/脚本程序/MEST/Screen Shot 2018-06-23 at 9.41.03 AM.png)
+  ![Screen Shot 2018-06-23 at 9.39.35 AM](/Users/yuhanyin/xcode/Mest/Screen Shot 2018-06-23 at 9.39.35 AM.png)
 
 
 - ##### 通过拖动等交互更改界面风格
@@ -99,7 +99,7 @@
     });
 ```
 
-##### 	![Screen Shot 2018-06-23 at 10.07.14 AM](/Users/yuhanyin/Documents/TJ/脚本程序/MEST/Screen Shot 2018-06-23 at 10.07.14 AM.png)
+##### ![Screen Shot 2018-06-23 at 10.07.14 AM](/Users/yuhanyin/xcode/Mest/Screen Shot 2018-06-23 at 10.07.14 AM.png)
 
 - ##### 过滤、点击编辑单条 todo
 
@@ -107,7 +107,7 @@
   - item将被赋予`no-over `/`over`类，用来标识是否完成。
   - 过滤条被固定在底部，方便用户操作，通过寻找所有带有`no-over `/`over` 标签的item，对其他item进行`visibility=“hidden”`
 
-  ​
+  ![Screen Shot 2018-06-23 at 9.41.03 AM](/Users/yuhanyin/xcode/Mest/Screen Shot 2018-06-23 at 9.41.03 AM.png)
 
 - ##### 保存页面状态，刷新页面后可恢复
 
@@ -138,4 +138,18 @@
     });
 
 ```
+
+
+
+### 
+
+------
+
+> #### 项目目录
+
+- mest.html
+- mest.css
+- Mest.js
+- App.js 网关
+- Memory.js 数据存储
 
